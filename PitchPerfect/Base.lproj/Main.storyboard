@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,97 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyb-PP-5yO">
+                                <rect key="frame" x="131" y="276" width="100" height="100"/>
+                                <state key="normal" image="Microphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="RecordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Q8Z-pa-ngU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPO-j3-Xh9">
+                                <rect key="frame" x="160" y="420" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="162" y="358" width="79" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="uyb-PP-5yO" secondAttribute="centerX" id="1GP-UO-rpF"/>
+                            <constraint firstAttribute="centerX" secondItem="FPO-j3-Xh9" secondAttribute="centerX" constant="18.5" id="4tc-FP-iee"/>
+                            <constraint firstAttribute="centerY" secondItem="uyb-PP-5yO" secondAttribute="centerY" constant="-26" id="9wU-qs-Hmy"/>
+                            <constraint firstItem="FPO-j3-Xh9" firstAttribute="top" secondItem="uyb-PP-5yO" secondAttribute="bottom" constant="8" id="AAj-0k-C1k"/>
+                            <constraint firstAttribute="centerX" secondItem="FPO-j3-Xh9" secondAttribute="centerX" constant="119" id="ABb-UQ-cAp"/>
+                            <constraint firstAttribute="centerY" secondItem="uyb-PP-5yO" secondAttribute="centerY" id="C0g-45-2Vs"/>
+                            <constraint firstAttribute="centerY" secondItem="uyb-PP-5yO" secondAttribute="centerY" id="HXg-C1-4E6"/>
+                            <constraint firstItem="FPO-j3-Xh9" firstAttribute="top" secondItem="uyb-PP-5yO" secondAttribute="bottom" constant="8" id="JkL-lk-B5K"/>
+                            <constraint firstItem="FPO-j3-Xh9" firstAttribute="top" secondItem="uyb-PP-5yO" secondAttribute="bottom" constant="8" id="Kc0-nF-Zft"/>
+                            <constraint firstItem="FPO-j3-Xh9" firstAttribute="top" secondItem="uyb-PP-5yO" secondAttribute="bottom" constant="8" id="Mcu-JE-xLx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FPO-j3-Xh9" secondAttribute="trailing" constant="163" id="Ob5-vh-8Jz"/>
+                            <constraint firstAttribute="centerY" secondItem="FPO-j3-Xh9" secondAttribute="centerY" constant="-68.5" id="QUw-zM-Arj"/>
+                            <constraint firstAttribute="centerX" secondItem="uyb-PP-5yO" secondAttribute="centerX" constant="119" id="Xol-0f-aUB"/>
+                            <constraint firstAttribute="centerY" secondItem="FPO-j3-Xh9" secondAttribute="centerY" constant="-130.5" id="id6-GS-VDY"/>
+                            <constraint firstAttribute="centerX" secondItem="FPO-j3-Xh9" secondAttribute="centerX" constant="18.5" id="qE6-m5-aSd"/>
+                            <constraint firstAttribute="centerX" secondItem="uyb-PP-5yO" secondAttribute="centerX" id="ten-Ig-8KN"/>
+                            <constraint firstAttribute="centerY" secondItem="FPO-j3-Xh9" secondAttribute="centerY" constant="-68.5" id="v0T-LN-eDe"/>
+                            <constraint firstAttribute="centerY" secondItem="uyb-PP-5yO" secondAttribute="centerY" constant="-26" id="vUJ-mF-ml9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1GP-UO-rpF"/>
+                                <exclude reference="9wU-qs-Hmy"/>
+                                <exclude reference="C0g-45-2Vs"/>
+                                <exclude reference="HXg-C1-4E6"/>
+                                <exclude reference="ten-Ig-8KN"/>
+                                <exclude reference="4tc-FP-iee"/>
+                                <exclude reference="AAj-0k-C1k"/>
+                                <exclude reference="JkL-lk-B5K"/>
+                                <exclude reference="Kc0-nF-Zft"/>
+                                <exclude reference="Mcu-JE-xLx"/>
+                                <exclude reference="Ob5-vh-8Jz"/>
+                                <exclude reference="QUw-zM-Arj"/>
+                                <exclude reference="qE6-m5-aSd"/>
+                                <exclude reference="v0T-LN-eDe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="1GP-UO-rpF"/>
+                                <exclude reference="9wU-qs-Hmy"/>
+                                <include reference="C0g-45-2Vs"/>
+                                <exclude reference="HXg-C1-4E6"/>
+                                <exclude reference="Xol-0f-aUB"/>
+                                <include reference="ten-Ig-8KN"/>
+                                <exclude reference="vUJ-mF-ml9"/>
+                                <exclude reference="4tc-FP-iee"/>
+                                <exclude reference="AAj-0k-C1k"/>
+                                <exclude reference="ABb-UQ-cAp"/>
+                                <include reference="JkL-lk-B5K"/>
+                                <exclude reference="Kc0-nF-Zft"/>
+                                <exclude reference="Mcu-JE-xLx"/>
+                                <exclude reference="Ob5-vh-8Jz"/>
+                                <exclude reference="QUw-zM-Arj"/>
+                                <exclude reference="id6-GS-VDY"/>
+                                <include reference="qE6-m5-aSd"/>
+                                <include reference="v0T-LN-eDe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="FPO-j3-Xh9" id="h2Q-xD-uRG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Microphone" width="100" height="100"/>
+    </resources>
 </document>
