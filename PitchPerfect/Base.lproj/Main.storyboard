@@ -9,7 +9,7 @@
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -37,7 +37,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="t6O-4X-khv"/>
-                                    <segue destination="ZSn-He-J7C" kind="show" id="wAc-Ie-dTw"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPO-j3-Xh9">
@@ -134,6 +133,7 @@
                     <connections>
                         <outlet property="recordingInProgress" destination="FPO-j3-Xh9" id="h2Q-xD-uRG"/>
                         <outlet property="stopButton" destination="cb9-aP-XMT" id="tSU-nm-hLJ"/>
+                        <segue destination="ZSn-He-J7C" kind="show" identifier="stopRecording" id="ikE-0d-Sc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -167,6 +167,18 @@
                                     <action selector="playSlowAudio:" destination="ZSn-He-J7C" eventType="touchUpInside" id="oH3-7E-J0C"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6V-g0-lnD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="StopButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="170" y="428" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopAudioPlayer:" destination="ZSn-He-J7C" eventType="touchUpInside" id="Wvk-eW-A2L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -177,6 +189,7 @@
                             <mask key="subviews">
                                 <exclude reference="Tmq-d7-aS4"/>
                                 <exclude reference="yAu-DX-SSc"/>
+                                <exclude reference="s6V-g0-lnD"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="DLk-C6-R6V"/>
@@ -187,6 +200,7 @@
                             <mask key="subviews">
                                 <exclude reference="Tmq-d7-aS4"/>
                                 <include reference="yAu-DX-SSc"/>
+                                <include reference="s6V-g0-lnD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="DLk-C6-R6V"/>
